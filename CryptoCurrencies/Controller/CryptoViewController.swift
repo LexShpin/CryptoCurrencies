@@ -56,6 +56,7 @@ extension CryptoViewController: CryptoManagerDelegate {
         print(error)
         return
     }
+    
     func updateCurrency(crypto: CryptoModel) {
         DispatchQueue.main.async {
             self.rateLabel.text = String(format: "%.1f", crypto.rate)

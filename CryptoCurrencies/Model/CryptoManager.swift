@@ -32,7 +32,7 @@ struct CryptoManager {
             
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) {data, reponse, error in
-                if error != nil {
+                if let error = error {
                     print(error)
                     return
                 }
