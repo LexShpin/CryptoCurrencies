@@ -16,39 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHP-xM-IIi">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHP-xM-IIi">
                                 <rect key="frame" x="0.0" y="666" width="414" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="VtM-cH-tFX"/>
+                                </constraints>
                             </pickerView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3w-Zc-WvS">
-                                <rect key="frame" x="32" y="138" width="351" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3w-Zc-WvS">
+                                <rect key="frame" x="31.5" y="138" width="351" height="80"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pNB-yt-0Ja">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoinsign.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="pNB-yt-0Ja">
                                         <rect key="frame" x="35" y="0.5" width="80" height="79"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-wi-LUw">
-                                        <rect key="frame" x="130" y="25" width="90" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMn-wi-LUw">
+                                        <rect key="frame" x="130" y="25" width="91" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-Bz-JSh">
-                                        <rect key="frame" x="228" y="25" width="66" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sh8-Bz-JSh">
+                                        <rect key="frame" x="229" y="25" width="65" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.48292356567930717" green="0.57463623019837706" blue="0.97052556820000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="KMn-wi-LUw" firstAttribute="leading" secondItem="pNB-yt-0Ja" secondAttribute="trailing" constant="15" id="5nM-Tl-jL9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sh8-Bz-JSh" secondAttribute="trailing" constant="57" id="6Px-9G-WXj"/>
+                                    <constraint firstItem="Sh8-Bz-JSh" firstAttribute="centerY" secondItem="K3w-Zc-WvS" secondAttribute="centerY" id="Rmf-c9-WSC"/>
+                                    <constraint firstAttribute="height" constant="80" id="Zts-Da-xK4"/>
+                                    <constraint firstItem="pNB-yt-0Ja" firstAttribute="width" secondItem="K3w-Zc-WvS" secondAttribute="height" multiplier="1:1" id="abx-Ek-9HM"/>
+                                    <constraint firstItem="Sh8-Bz-JSh" firstAttribute="leading" secondItem="KMn-wi-LUw" secondAttribute="trailing" constant="8" symbolic="YES" id="b2w-bo-mzK"/>
+                                    <constraint firstAttribute="width" secondItem="K3w-Zc-WvS" secondAttribute="height" multiplier="351:80" id="dMv-fm-GIM"/>
+                                    <constraint firstItem="pNB-yt-0Ja" firstAttribute="leading" secondItem="K3w-Zc-WvS" secondAttribute="leading" constant="35" id="f6z-Qz-qSx"/>
+                                    <constraint firstItem="pNB-yt-0Ja" firstAttribute="centerY" secondItem="K3w-Zc-WvS" secondAttribute="centerY" id="hqi-9d-Hk3"/>
+                                    <constraint firstItem="KMn-wi-LUw" firstAttribute="centerY" secondItem="K3w-Zc-WvS" secondAttribute="centerY" id="mHj-yl-lzl"/>
+                                    <constraint firstItem="KMn-wi-LUw" firstAttribute="centerX" secondItem="K3w-Zc-WvS" secondAttribute="centerX" id="oIN-C3-SKj"/>
+                                    <constraint firstItem="pNB-yt-0Ja" firstAttribute="height" secondItem="K3w-Zc-WvS" secondAttribute="height" id="pgL-5X-z20"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BitCoin Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-h2-1yt">
-                                <rect key="frame" x="115" y="66" width="185" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BitCoin Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv4-h2-1yt">
+                                <rect key="frame" x="114.5" y="66" width="185" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -56,6 +67,15 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.61626103380030994" green="0.72464909448161852" blue="0.92128556966781616" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OHP-xM-IIi" secondAttribute="bottom" constant="34" id="3AY-Ri-RzA"/>
+                            <constraint firstItem="OHP-xM-IIi" firstAttribute="centerX" secondItem="K3w-Zc-WvS" secondAttribute="centerX" id="FDc-RC-fkK"/>
+                            <constraint firstItem="K3w-Zc-WvS" firstAttribute="top" secondItem="Tv4-h2-1yt" secondAttribute="bottom" constant="33" id="Gcw-c7-6k7"/>
+                            <constraint firstItem="Tv4-h2-1yt" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QYB-b5-d2Q"/>
+                            <constraint firstItem="Tv4-h2-1yt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="aHf-UF-iiG"/>
+                            <constraint firstItem="OHP-xM-IIi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bYE-zR-8MX"/>
+                            <constraint firstItem="OHP-xM-IIi" firstAttribute="centerX" secondItem="Tv4-h2-1yt" secondAttribute="centerX" id="yFP-cq-DJa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="currencyLabel" destination="Sh8-Bz-JSh" id="v7v-4f-5uY"/>

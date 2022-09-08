@@ -23,6 +23,7 @@ class CryptoViewController: UIViewController {
         
         cryptoManager.delegate = self
         rateLabel.adjustsFontSizeToFitWidth = true
+        cryptoManager.getCurrency(currency: "AUD")
     }
 
 
